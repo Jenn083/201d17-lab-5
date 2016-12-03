@@ -102,13 +102,16 @@ function sumAndMultiply(a,b,c){ //eslint-disable-line
 
 // Here is the test for sumArray(); uncomment it to run it
 
-testSumArray(testArray);
+//testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
 /* Problem 5
-Write a function called multiplyArray() that takes an array of numbers as its argument and returns an array whose first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
+Write a function called multiplyArray() that takes an array of numbers as its
+argument and returns an array whose first element is the product of those numbers,
+and the second element is a string that EXACTLY follows this example and uses
+the values that were input into the function:
 
 "The numbers 2,3,4 have a product of 24."
 
@@ -119,9 +122,14 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiplyArray(testArray){ //eslint-disable-line
 
+  var y = multiply(testArray[0],testArray[1])[0];
+  var result = multiply(y,testArray[2])[0];
+  var string4 = 'The numbers ' + testArray + ' have a product of ' + result + '.';
+  return [result,string4];
+
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray([2,3,4]);
+testMultiplyArray([2,3,4]);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
